@@ -1,8 +1,9 @@
-# (TODO: your game's title)
+# Non-Functional Plant Watering Game
 
-Author: (TODO: your name)
+Author: Vishant Raajkumar
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+Design: The game was intended to be a game in which you have to find an optimal path to water all of your plants before they dry out.
+        Unfortunately, my asset pipeline wasn't working so I have transformed it into a commentary on art (I recognize I'm getting no points for this).
 
 Screen Shot:
 
@@ -10,13 +11,18 @@ Screen Shot:
 
 How Your Asset Pipeline Works:
 
-(TODO: describe the steps in your asset pipeline, from source files to tiles/backgrounds/whatever you upload to the PPU466.)
+I made all of the source art in GIMP. I couldn't finish the rest of the pipeline because I was running into issues exporting from GIMP.
+I basically tried to crop images with Microsoft's built-in photo editor in Windows 11, but I kept running into issues with the colors being off until
+I realized that no one should ever use the built-in photo editor. 
+In the file [link](asset_generation.py), I open each of the files with Python and PIL and parse the files to get the tiles and the palettes.
+Unfortunately, I was unable to properly encode the values for the tiles so they're currently stored as tuples of numbers.
+The intent was to take the results from the Python script and encode them into static arrays in PlayMode.cpp.
 
-(TODO: make sure the source files you drew are included. You can [link](your/file.png) to them to be a bit fancier.)
+The source files for the art are present in the art folder.
 
 How To Play:
 
-(TODO: describe the controls and (if needed) goals/strategy.)
+Do nothing, observe the beautiful empty screen, and reflect on the meaning of art and life.
 
 This game was built with [NEST](NEST.md).
 
